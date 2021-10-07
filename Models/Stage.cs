@@ -6,7 +6,7 @@ namespace Festival.Models
     {
         public Stage()
         {
-            this.Artist = new HashSet<Artist>();
+            this.Artists = new HashSet<Artist>();
         }
 
         public int StageId { get; set; }

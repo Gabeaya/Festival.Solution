@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Festival.Models.Stage
+
+<h2>Edit</h2>
+
+<h4>Edit this artist: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.StageId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.Capacity)
+    @Html.EditorFor(model => model.Capacity)
+    @Html.LabelFor(model => model.Location)
+    @Html.EditorFor(model => model.Location)
+    <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Back to stage list", "Index")</p>

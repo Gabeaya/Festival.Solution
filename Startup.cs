@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;//necesarry to call the usemysql method
-using Festival.Models;//in order to use <ToDoListContext>
+using Festival.Models;//in order to use <FestivalContext>
 
 namespace Festival
 {
@@ -41,7 +41,7 @@ namespace Festival
       
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Hello World!");
+        await context.Response.WriteAsync("Page Not Found!");
       });
     }
   }

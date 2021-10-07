@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Festival.Models.Stage
+
+<h2>Stage Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
+<h3>@Html.DisplayNameFor(model => model.Capacity): @Html.DisplayFor(model => model.Capacity)<h3>
+<h3>@Html.DisplayNameFor(model => model.Location): @Html.DisplayFor(model => model.Location)<h3>
+  
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Stage", "Edit", new { id = Model.StageId})</p>
+<p>@Html.ActionLink("Delete Stage", "Delete", new { id = Model.StageId })</p>
+<p>@Html.ActionLink("Add artist", "Create", "Artists")</p>
